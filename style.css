@@ -7,11 +7,12 @@ body{
     background-color:rgba(215, 215, 215) ;
     font-family: "Work Sans"; 
 }
-
+a{
+    text-decoration: none;
+}
 body::-webkit-scrollbar {
     display: none;
 }
-
 .cont{
     display: flex;
     justify-content: center;
@@ -153,13 +154,6 @@ body::-webkit-scrollbar {
     color: rgba(30, 30, 30);
 }
 
-main{
-    margin-inline: 1rem;
-    height: 250rem;
-
-    border-radius: 50px;
-}
-
 .main__title {
     line-height: 1rem;
     text-align: center;
@@ -172,6 +166,7 @@ main{
 }
 
 .cuadrados{
+    margin-inline: 1rem;
     gap: 2rem;
     display: flex;
     justify-content: space-evenly;
@@ -184,7 +179,7 @@ main{
     height: 10rem;
     border-radius: 10px ;
     border: 1px solid black;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 .cont_img{
@@ -204,11 +199,26 @@ main{
     border-radius: 10px ;
 }
 
-.cuadrados__cont:nth-child(1) {
+.colorHTML {
     background-color: rgb(226, 88, 45);
 }
+.colorCSS{
+    background-color: rgb(67, 144, 207);
+}
+.colorGitHub{
+    background-color: rgb(74, 83, 138);
+}
+.colorGit{
+    background-color: rgb(255, 255, 255);
+}
+.colorMysql{
+    background-color: rgb(172, 206, 233);
+}
+.colorJava{
+    background-color: rgba(255, 205, 116);
+}
 
-.cuadrados__cont:nth-child(1):hover{
+.cuadrados__cont.colorHTML:hover{
     box-shadow: 0px 0px 50px rgb(226, 87, 45);
     background-color: rgba(255, 255, 255, 0);
     transform: scale(1.01);
@@ -218,11 +228,7 @@ main{
         }
 }
 
-.cuadrados__cont:nth-child(2) {
-    background-color: rgb(67, 144, 207);
-}
-
-.cuadrados__cont:nth-child(2):hover{
+.cuadrados__cont.colorCSS:hover{
     box-shadow: 0px 0px 50px rgb(67, 144, 207);
     background-color: rgba(255, 255, 255, 0);
     transform: scale(1.01);
@@ -231,12 +237,7 @@ main{
         z-index: -1;
         }
 }
-
-.cuadrados__cont:nth-child(3) {
-    background-color: rgb(74, 83, 138);
-}
-
-.cuadrados__cont:nth-child(3):hover{
+.cuadrados__cont.colorGitHub:hover{
     box-shadow: 0px 0px 50px rgb(74, 83, 138);
     background-color: rgba(255, 255, 255, 0);
     transform: scale(1.01);
@@ -245,32 +246,22 @@ main{
         z-index: -1;
         }
 }
-
-.cuadrados__cont:nth-child(4) {
-    background-color: rgb(255, 255, 255);
-}
-
-.cuadrados__cont:nth-child(4):hover{
+.cuadrados__cont.colorGit:hover{
     box-shadow: 0px 0px 50px rgb(255, 255, 255);
     transform: scale(1.01);
 }
-
-.cuadrados__cont:nth-child(5) {
-    background-color: rgb(172, 206, 233);
-}
-
-.cuadrados__cont:nth-child(5):hover{
+.cuadrados__cont.colorMysql:hover{
     box-shadow: 0px 0px 50px rgb(172, 206, 233);
     transform: scale(1.01);
 }
-
-.cuadrados__cont:nth-child(6) {
-    background-color: rgba(255, 205, 116);
-}
-
-.cuadrados__cont:nth-child(6):hover{
+.cuadrados__cont.colorJava:hover{
     box-shadow: 0px 0px 50px rgba(255, 205, 116);
+    background-color: rgba(255, 255, 255, 0);
     transform: scale(1.01);
+    .cont__video{
+        opacity: 0.5;
+        z-index: -1;
+        }
 }
 
 @media (max-width: 720px) {
@@ -291,30 +282,61 @@ main{
 
 .exp__casilla{
     padding: 1rem;
-    display: grid;
-    grid-template-columns: auto auto ;
-    grid-template-rows: auto auto;
     background-color: rgba(30, 30, 30);
-    justify-items: center;
-    align-items: center;
     color: rgb(216, 215, 215);
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
 .casilla__titulo{
     margin-block: 0;
-    font-size: 4rem;
-    grid-column: 1/3;
-}
-.casilla__p{
-    padding: 1rem;
-    margin: 1rem;
-    background-color: rgba(255, 228, 196, 0.26);
-    grid-row: 2/-1;
-    max-width: 30rem;
-}
-.casilla__img{
-    height: 200px;
-    grid-row: 2/-2;
-    background-color: rgb(95, 206, 101);
+    font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
+.casilla__cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cont__div{
+    font-size: 1.2rem;
+    padding: 1rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.casilla__img{
+    min-width: 400px;
+    width: 30%;
+    box-shadow: 0px 0px 30px rgba(175, 175, 175, 0.233);
+    border-radius: 10px;
+}
+
+.cont__list{
+    color: black;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cont__elemento{
+    transition: 0.6s;
+    padding-block: 0.3rem;
+    padding-inline: 1rem;
+    border-radius: 30px;
+}
+
+.cont__link{
+    color:  rgb(67, 144, 207);
+}
+
+.cont__list .cont__elemento:hover{
+    transform: scale(1.1);
+}
